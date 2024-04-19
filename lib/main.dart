@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       create: (context) =>
           OnboardingProvider(), // Provide your OnboardingProvider
       child: MaterialApp(
-        title: 'Your App',
+        title: 'Evetory',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

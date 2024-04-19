@@ -40,6 +40,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_animate: ^4.5.0
   bloc: ^8.1.4
+  staggered_grid_view_flutter: ^0.0.4
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,8 @@ flutter:
    - assets/images/onboarding_3.png
    - assets/images/coca.jpg
    - assets/images/pepsi.jpg
+   - assets/images/supra.jpg
+   - assets/images/z.jpg
   #   - imgaes/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
