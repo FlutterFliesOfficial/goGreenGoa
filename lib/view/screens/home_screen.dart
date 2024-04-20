@@ -6,9 +6,6 @@ import 'package:green/view/screens/notification_screen.dart';
 import 'package:green/view/screens/profile_screen.dart';
 import 'package:green/view/screens/search_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
 class MyApp extends StatelessWidget {
   @override
@@ -90,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             });
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: _isCreatingInventory
+                            backgroundColor: _isCreatingInventory
                                 ? Colors.blue
                                 : Colors.grey,
                           ),
@@ -105,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             });
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: _selectedInventoryType == 1
+                            backgroundColor: _selectedInventoryType == 1
                                 ? Colors.blue
                                 : Colors.grey,
                           ),
@@ -120,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             });
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: _selectedInventoryType == 2
+                            backgroundColor: _selectedInventoryType == 2
                                 ? Colors.blue
                                 : Colors.grey,
                           ),
