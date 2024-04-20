@@ -1,6 +1,27 @@
 // ignore_for_file: dead_code
 
 import 'package:flutter/material.dart';
+import 'package:green/view/screens/dashboard_screnn.dart';
+import 'package:green/view/screens/notification_screen.dart';
+import 'package:green/view/screens/profile_screen.dart';
+import 'package:green/view/screens/search_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Bottom Navigation Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomeScreen(),
+    );
+  }
+}
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -65,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {
                             setState(() {
                               _isCreatingInventory = true;
-                              _selectedInventoryType = 0;
+                              _selectedInventoryType = 1;
                             });
                           },
                           style: ElevatedButton.styleFrom(
@@ -122,6 +143,71 @@ class _HomeScreenState extends State<HomeScreen> {
                 ], //children
               ),
             ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0, // initial index
+        selectedItemColor: Colors.blue,
+        unselectedItemColor:
+            Colors.black, // set unselected button color to black
+        onTap: (int index) {
+          switch (index) {
+            case 0:
+              // Navigate to HomeScreen
+              break;
+            case 1:
+              // Navigate to DashboardScreen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Dashboard()),
+              );
+              break;
+            case 2:
+              // Navigate to SearchScreen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchScreen()),
+              );
+              break;
+            case 3:
+              // Navigate to ProfileScreen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+              );
+              break;
+            case 4:
+              // Navigate to NotificationsScreen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationsScreen()),
+              );
+              break;
+            default:
+              break;
+          }
+        },
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: 'Dashboard',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+          ),
+        ],
+      ),
     );
   }
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "68585758841",
+    "project_id": "airhouse-6eacf",
+    "storage_bucket": "airhouse-6eacf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68585758841:android:c4f48c8e9fa3a5229c34a8",
+        "android_client_info": {
+          "package_name": "com.example.green"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpxSsw3yHzaNQ48alqE7MbGWcG5KyqOPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
