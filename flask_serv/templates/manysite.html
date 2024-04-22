@@ -1,0 +1,35 @@
+{% extends "baseAlert.html" %}
+{% block content %}
+   <div class="container">
+        <h2>Product Registraion Form</h2>
+        <form method="POST" class="main-form">
+            <div class="form-group">
+                <label for="first_name">Product Name *</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter Product Name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Category Name *</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Category Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Dimentions *</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Product Volume" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">RFID UID *:</label>
+                <input type="text" class="form-control" id="pwd" placeholder="Enter RFID tag UID" name="pwd" required>
+            </div>
+            <div class="form-group"></div>
+            <label for="loc">Storage Location:</label>
+            <input type="text" class="form-control" id="loc" placeholder="Enter preffered storage type" name="loc" required>
+            </div>
+            <div class="form-group">
+        <label for="qty">quantity:</label>
+        <input type="text" class="form-control" id="qty" placeholder="Enter preffered storage type" name="qty" required>
+        </div>
+        
+            <button type="submit" class="btn btn-default">Submit</button>  
+            <button type="submit" class="btn btn-default">scan from available product db    </button>           
+        </form>
+   </div> 
+{% endblock %}

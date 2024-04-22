@@ -1,0 +1,11 @@
+{% extends 'baseAlert.html' %}
+
+{% block content %}
+    <h1>{% block title %} Messages {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3>reader: {{ message['reader_id'] }}</h3>
+            <p>UID: {{ message['UID'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
